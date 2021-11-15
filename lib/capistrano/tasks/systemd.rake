@@ -138,8 +138,8 @@ namespace :sidekiq do
       ),
     ]
     template_path = search_paths.detect { |path| File.file?(path) }
-    puts "BBBBBBBBBBBBBB #{fetch(:stage)}"
-    puts "CCCCCCCCCCCCCC_sidekiq_#{fetch(:stage)}"
+    puts "BBBBBBBBBBBBBB #{fetch(:blavar)}"
+    
     puts "AAAAAAAAAAA #{fetch(:sidekiq_service_unit_name)}"
     puts search_paths
     puts template_path
