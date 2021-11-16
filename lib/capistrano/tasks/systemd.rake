@@ -138,11 +138,6 @@ namespace :sidekiq do
       ),
     ]
     template_path = search_paths.detect { |path| File.file?(path) }
-    puts "BBBBBBBBBBBBBB #{fetch(:blavar)}"
-    
-    puts "AAAAAAAAAAA #{fetch(:sidekiq_service_unit_name)}"
-    puts search_paths
-    puts template_path
     template = File.read(template_path)
     ERB.new(template).result(binding)
   end
